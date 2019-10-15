@@ -41,8 +41,8 @@ a["throwaway4"]=a.throwaway4.astype(int)
 a["throwaway5"]=a["title"].str.contains(r"throwaway",regex=True)
 a["throwaway5"]=a.throwaway5.astype(int)
 
-a["throwaway5"]=a["title"].str.contains(r"throw away",regex=True)
-a["throwaway5"]=a.throwaway5.astype(int)
+a["throwaway6"]=a["title"].str.contains(r"throw away",regex=True)
+a["throwaway6"]=a.throwaway6.astype(int)
 
 a.to_csv('NEWSUBREDDITPOSTFILE.csv', encoding='utf-8')
 c.to_csv('NEWSUBREDDITPOSTCOMMENTFILE.csv', encoding='utf-8')
