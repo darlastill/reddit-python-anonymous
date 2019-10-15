@@ -4,6 +4,11 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
+#This code aims to determine whether a given username from a given subreddit
+#appears only in the subreddit or whether the username is used elsewhere on Reddit.com.
+
+#This code assumes text is cleaned and all lower-case
+
 c=pd.read_csv("SUBREDDITPOSTCOMMENTFILE.csv")
 a=pd.read_csv("SUBREDDITPOSTAUTHORFILE.csv")
 aut=pd.read_csv("ALLOFREDDITAUTHORFILE.csv")
