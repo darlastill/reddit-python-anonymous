@@ -26,5 +26,23 @@ c['comments'] = c['author'].groupby(c['ID']).transform('sum')
 a['trueanon'] = np.where(a["author"].isin(allOPs),"Not Anon", "Anonymous")
 a['trueanon_b']= np.where(a["author"].isin(allOPs),"0", "1")
 
+a["throwaway1"]=a["selftext"].str.contains("throwaway",regex=True)
+a["throwaway1"]=a.throwaway1.astype(int)
+
+a["throwaway2"]=a["selftext"].str.contains("throw away",regex=True)
+a["throwaway2"]=a.throwaway2.astype(int)
+
+a["throwaway3"]=a["author"].str.contains(r"thro*",regex=True)
+a["throwaway3"]=a.throwaway3.astype(int)
+
+a["throwaway4"]=a["author"].str.contains(r"thr0*",regex=True)
+a["throwaway4"]=a.throwaway4.astype(int)
+
+a["throwaway5"]=a["title"].str.contains(r"throwaway",regex=True)
+a["throwaway5"]=a.throwaway5.astype(int)
+
+a["throwaway5"]=a["title"].str.contains(r"throw away",regex=True)
+a["throwaway5"]=a.throwaway5.astype(int)
+
 a.to_csv('NEWSUBREDDITPOSTFILE.csv', encoding='utf-8')
 c.to_csv('NEWSUBREDDITPOSTCOMMENTFILE.csv', encoding='utf-8')
