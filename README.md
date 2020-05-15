@@ -12,7 +12,7 @@ Want the Reddit data? See this archived [Reddit post](https://www.reddit.com/r/d
 
 * Read in three data files - sample authors, sample commenters, and the corpus of authors outside of your sample. 
 
-* The code creates a numpy array for you to search the corpus for authors and create binary variable indicating whether an author appears outside of the subreddit of study. 
+* The code creates a numpy array for you to search the corpus for authors and create a binary variable indicating whether an author appears outside of the subreddit of study. 
 
 * Then, save this as a new csv file. 
 
